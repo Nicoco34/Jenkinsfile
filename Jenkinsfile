@@ -1,18 +1,18 @@
 pipeline {
     agent any
-stage("Parallel") {
-    steps {
-        parallel (
-            "firstTask" : {
-                echo 'Ceci est le build1'
-            },
-            "secondTask" : {
-                echo 'Ceci est le build1'
-            }
-        )
+        stage("Parallel") 
+            steps {
+                parallel (
+                    "firstTask" : {
+                        echo 'Ceci est le build1'
+                    },
+                    "secondTask" : {
+                        echo 'Ceci est le build1'
+                    }
+                )   
     }
 }
-        }
+        
         stage('build2') {
             steps {
                 input 'Do you approve deployment?'
