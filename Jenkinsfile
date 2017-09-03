@@ -1,7 +1,7 @@
 pipeline {
+    input 'Do you approve deployment?'
     agent any
     stages {
-        input 'Do you approve deployment?'
         stage('Example') {
             steps {
                 echo 'Hello World'
