@@ -1,18 +1,17 @@
 pipeline {
     agent any
-    stages {
-        stage('Build') {
+stage("Parallel") {
     steps {
         parallel (
-            "Windows" : {
-                echo 'done'
+            "firstTask" : {
+                echo 'Ceci est le build1'
             },
-            "Linux" : {
-                echo 'done'
+            "secondTask" : {
+                echo 'Ceci est le build1'
             }
         )
-     }
-} 
+    }
+}
         }
         stage('build2') {
             steps {
