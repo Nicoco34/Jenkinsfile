@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('build1') {
-            steps {
+            steps('step1') {
                 input 'Do you approve deployment?'
                 echo 'Ceci est le build1'
                 build job: 'test1', parameters: [string(name: 'var', value: 'coucou build1')]
